@@ -6,8 +6,15 @@ namespace _02FirstProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int i = 1;
+            int k=i++;
+            Console.WriteLine(k);
+            int x = 1;
+            int t = ++x;
+            Console.WriteLine(t);
+          
             Console.ReadKey();
+     
         }
     }
 }
