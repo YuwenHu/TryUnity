@@ -13,6 +13,7 @@ namespace _CsharpBasicbyHEHE
         int B; //声明变量就是确定变量类型
         double C = 1.2;
         float D = 2;
+        char E = 'Z';
 
         ///类、方法
         //comments  control+k+c uncomment control+k+u
@@ -30,20 +31,20 @@ namespace _CsharpBasicbyHEHE
 
         public void Display()
         {   //print
-            Console.WriteLine("first assginment.");
+            Console.WriteLine("first assginment." + E);
             Console.WriteLine("multiple: {0}", Calculate());
+                Console.WriteLine("multiple: {0}", Calculate() + E); 
         }
     }
     class basicMix
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("first assginment.");
-            Console.WriteLine("why live?");
-            Console.WriteLine("funplus");
-            Console.ReadKey();
 
+            DefinitionAndMethod newNum = new DefinitionAndMethod();
+            newNum.GivenValue();
+            newNum.Display();
+            
             //plus and diminish
             //difference with ++i and i++, also ++ with --
             int i = 1;
@@ -52,6 +53,7 @@ namespace _CsharpBasicbyHEHE
             int x = 1;
             int t = ++x;
             Console.WriteLine(t);
+            Console.ReadLine();
         }
     }
 }
