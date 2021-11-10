@@ -19,13 +19,15 @@ namespace _CsharpBasicbyHEHE
         double H;
         int I;
         int J;
+        double K;
 
         ///类、方法
         //comments  control+k+c uncomment control+k+u
 
         public void GivenValue()
         {
-            B = 2; //赋值 变量B已在前面被声明
+            B = 2;//赋值 变量B已在前面被声明
+            K = A;//转换数据类型显示
         }
         #endregion
 
@@ -43,7 +45,7 @@ namespace _CsharpBasicbyHEHE
         }
 
         public double SwitchType()
-        {   //转换数据类型
+        {   //转换数据类型隐式
             G = (int)F;
             return G;
         }
@@ -55,6 +57,7 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine("multiple try to add a char with a double num: {0}", Calculate() + E);//char可以被计算
             Console.WriteLine("multiple quotian and remain: {0}, switch the type of an int num into double{1}", Calculate1(), SwitchType());//{0}, {1}是占位符
             Console.WriteLine(F.ToString());//转换数据类型
+            Console.WriteLine(A);
         }
     }
     class basicMix
@@ -73,8 +76,27 @@ namespace _CsharpBasicbyHEHE
             int x = 1;
             int t = ++x;
             Console.WriteLine(t);
-            Console.ReadLine();//console.readkey()不是同一效果
+            Console.ReadKey();//console.readkey()不是同一效果
             //且realine和readkey之后需要等待用户操作，不会继续执行
+
+            //readline()
+            Console.WriteLine("ei wasup");
+            string greetings = Console.ReadLine();
+            if (greetings == "me good")//if elseif else
+            {
+                Console.WriteLine("great!");
+                Console.ReadKey();
+            }
+            else if(greetings == "busy")
+            {
+                Console.WriteLine("ei, no worries, k?");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Sorry, I don't get it.");
+                Console.ReadKey();
+            }
         }
     }
 }
