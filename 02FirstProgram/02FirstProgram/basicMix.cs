@@ -61,6 +61,10 @@ namespace _CsharpBasicbyHEHE
     {
         static void Main(string[] args)
         {
+            DefinitionAndMethod newNum = new DefinitionAndMethod();
+            newNum.GivenValue();
+            newNum.Display();
+
             //plus and diminish
             //difference with ++i and i++, also ++ with --
             int i = 1;
@@ -69,12 +73,8 @@ namespace _CsharpBasicbyHEHE
             int x = 1;
             int t = ++x;
             Console.WriteLine(t);
-            Console.ReadLine();//console.readkey()是同一效果
-
-
-            DefinitionAndMethod newNum = new DefinitionAndMethod();
-            newNum.GivenValue();
-            newNum.Display();
+            Console.ReadLine();//console.readkey()不是同一效果
+            //且realine和readkey之后需要等待用户操作，不会继续执行
         }
     }
 }
