@@ -11,7 +11,7 @@ namespace _CsharpBasicbyHEHE
 
         int A = 5;//or
         int B; //声明变量就是确定变量类型
-        double C = 1.2;
+        double C = 2.0;
         float D = 4;
         char E = 'Z';
         double F = 2.3;
@@ -27,7 +27,7 @@ namespace _CsharpBasicbyHEHE
         public void GivenValue()
         {
             B = 2;//赋值 变量B已在前面被声明
-            K = A;//转换数据类型显示
+            K = A;//转换数据类型：显示
         }
         #endregion
 
@@ -45,9 +45,21 @@ namespace _CsharpBasicbyHEHE
         }
 
         public double SwitchType()
-        {   //转换数据类型隐式
+        {   //转换数据类型：隐式
             G = (int)F;
             return G;
+        }
+
+        public double DoubleORInt()
+        {   //更隐晦的方式?表达转换数据类型：显式
+            double DoubleorInt = A / B;//将会出现一个整数
+            return DoubleorInt;
+        }
+
+        public double DoubleORInt1()
+        {   //更隐晦的方式?表达转换数据类型：隐式
+            double DoubleorInt1 = A / C;//将会出现一个小数
+            return DoubleorInt1;
         }
 
         public void Display()
@@ -58,6 +70,7 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine("multiple quotian and remain: {0}, switch the type of an int num into double{1}", Calculate1(), SwitchType());//{0}, {1}是占位符
             Console.WriteLine(F.ToString());//转换数据类型
             Console.WriteLine(A);
+            Console.WriteLine("数据类型转换：显式{0}, 数据类型转换：隐式{1}", DoubleORInt(), DoubleORInt1());
         }
     }
     class basicMix
