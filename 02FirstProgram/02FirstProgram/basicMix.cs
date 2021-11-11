@@ -70,7 +70,7 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine("multiple quotian and remain: {0}, switch the type of an int num into double{1}", Calculate1(), SwitchType());//{0}, {1}是占位符
             Console.WriteLine(F.ToString());//转换数据类型
             Console.WriteLine(A);
-            Console.WriteLine("数据类型转换：显式{0}, 数据类型转换：隐式{1}", DoubleORInt(), DoubleORInt1());
+            Console.WriteLine("数据类型转换\"显式\"{0},\n 数据类型转换\"隐式\"{1}", DoubleORInt(), DoubleORInt1());//\n是转义符：换行, \"是在文字中添加引号
         }
     }
     class basicMix
