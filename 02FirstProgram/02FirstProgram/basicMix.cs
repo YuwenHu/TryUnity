@@ -110,7 +110,7 @@ namespace _CsharpBasicbyHEHE
                 Console.WriteLine("You wanna a cup of coffee?");
                 string TeaOrCoffee = Console.ReadLine();
                 if (TeaOrCoffee == "coffee")
-                {
+                { 
                     Console.WriteLine("how many?");
                     int much = Convert.ToInt32(Console.ReadLine());
                     double total = much * PriceOfCoffee;
