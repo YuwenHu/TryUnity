@@ -20,6 +20,9 @@ namespace _CsharpBasicbyHEHE
         int I;
         int J;
         double K;
+        double PriceOfCoffee;
+        double PriceOfTea;
+        #endregion
 
         ///类、方法
         //comments  control+k+c uncomment control+k+u
@@ -28,8 +31,9 @@ namespace _CsharpBasicbyHEHE
         {
             B = 2;//赋值 变量B已在前面被声明
             K = A;//转换数据类型：显示
+            PriceOfCoffee = 32;
+            PriceOfTea = 25;
         }
-        #endregion
 
         public double Calculate()
         {
@@ -72,15 +76,9 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine(A);
             Console.WriteLine("数据类型转换\"显式\"{0},\n 数据类型转换\"隐式\"{1}", DoubleORInt(), DoubleORInt1());//\n是转义符：换行, \"是在文字中添加引号
         }
-    }
-    class basicMix
-    {
-        static void Main(string[] args)
-        {
-            DefinitionAndMethod newNum = new DefinitionAndMethod();
-            newNum.GivenValue();
-            newNum.Display();
 
+        public void PPIandIPP()
+        {
             //plus and diminish
             //difference with ++i and i++, also ++ with --
             int i = 1;
@@ -91,7 +89,10 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine(t);
             Console.ReadKey();//console.readkey()不是同一效果
             //且realine和readkey之后需要等待用户操作，不会继续执行
+        }
 
+        public void Chat()
+        {
             //readline()
             Console.WriteLine("ei wasup");
             string greetings = Console.ReadLine();
@@ -100,16 +101,38 @@ namespace _CsharpBasicbyHEHE
                 Console.WriteLine("great!");
                 Console.ReadKey();
             }
-            else if(greetings == "busy")
+            else if (greetings == "busy")
             {
                 Console.WriteLine("ei, no worries, k?");
                 Console.ReadKey();
+                Console.WriteLine("hum, let's say someone will have good lcuk today");
+                Console.ReadKey();
+                Console.WriteLine("You wanna a cup of coffee?");
+                string TeaOrCoffee = Console.ReadLine();
+                if (TeaOrCoffee == "coffee")
+                {
+                    Console.WriteLine("how many?");
+                    int much = Convert.ToInt32(Console.ReadLine());
+                    double total = much * PriceOfCoffee;
+                    Console.WriteLine("There you go. I paid {0} for you. a..a.aha.. Nothing.", total);
+                }
             }
             else
             {
                 Console.WriteLine("Sorry, I don't get it.");
                 Console.ReadKey();
             }
+        }
+    }
+    class basicMix
+    {
+        static void Main(string[] args)
+        {
+            DefinitionAndMethod newNum = new DefinitionAndMethod();
+            newNum.GivenValue();
+            newNum.PPIandIPP();
+            newNum.Display();
+            newNum.Chat();
         }
     }
 }
