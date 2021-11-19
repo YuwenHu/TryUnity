@@ -22,6 +22,7 @@ namespace _CsharpBasicbyHEHE
         double K;
         double PriceOfCoffee;
         double PriceOfTea;
+        public const int L = 5;//常量
         #endregion
 
         ///类、方法
@@ -65,6 +66,8 @@ namespace _CsharpBasicbyHEHE
             double DoubleorInt1 = A / C;//将会出现一个小数
             return DoubleorInt1;
         }
+
+
 
         public void Display()
         {   //print
@@ -136,4 +139,4 @@ namespace _CsharpBasicbyHEHE
         }
     }
 }
-//waiting list: pointer, 
+//waiting list: pointer, && ||, 
