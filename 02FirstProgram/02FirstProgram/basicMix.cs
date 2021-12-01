@@ -71,13 +71,16 @@ namespace _CsharpBasicbyHEHE
 
         public void Display()
         {   //print
-            Console.WriteLine("first assginment about print" + E);
+            Console.WriteLine("first assginment a\babout print" + E);//\b是一个backspace删除前一个字符，且句子的头尾不起作用sys不支持
             Console.WriteLine("multiple and divide: \t{0}", Calculate());//\t是一个tab
             Console.WriteLine("multiple try to add a char with a double num: {0}", Calculate() + E);//char可以被计算
             Console.WriteLine("multiple quotian and remain: {0}, switch the type of an int num into double{1}", Calculate1(), SwitchType());//{0}, {1}是占位符
             Console.WriteLine(F.ToString());//转换数据类型
             Console.WriteLine(A);
             Console.WriteLine("数据类型转换\"显式\"{0}, \n数据类型转换\"隐式\"{1}", DoubleORInt(), DoubleORInt1());//\n是转义符：换行, \"是在文字中添加引号
+            Console.WriteLine(@"\A\B\C");//@保证程序输出地址栏，即取消\的转义符作用
+            Console.WriteLine(@"黑，
+            你好");//用@将字符串按原格式输出
         }
 
         public void PPIandIPP()
