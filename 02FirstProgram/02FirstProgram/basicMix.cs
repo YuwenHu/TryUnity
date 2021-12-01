@@ -67,7 +67,11 @@ namespace _CsharpBasicbyHEHE
             return DoubleorInt1;
         }
 
-
+        public bool SmallerOrBigger()
+        {
+            bool judge = 230 < 1 || 230 > 1;
+            return judge;
+        }
 
         public void Display()
         {   //print
@@ -81,6 +85,7 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine(@"\A\B\C");//@保证程序输出地址栏，即取消\的转义符作用
             Console.WriteLine(@"黑，
             你好");//用@将字符串按原格式输出
+            Console.WriteLine("{0}", SmallerOrBigger());
         }
 
         public void PPIandIPP()
@@ -115,12 +120,27 @@ namespace _CsharpBasicbyHEHE
                 Console.ReadKey();
                 Console.WriteLine("You wanna a cup of coffee?");
                 string TeaOrCoffee = Console.ReadLine();
-                if (TeaOrCoffee == "coffee")
+                if (TeaOrCoffee == "why not")
                 { 
                     Console.WriteLine("how many?");
-                    int much = Convert.ToInt32(Console.ReadLine());
-                    double total = much * PriceOfCoffee;
-                    Console.WriteLine("There you go. I paid {0} for you. a..a.aha.. Nothing.", total);
+                    int much = Convert.ToInt32(Console.ReadLine());//convert 将string变为int类型 eg如果much是int类型，则readline读的内容不能有字符串
+                    if (much <= 2)
+                    {
+                        Console.WriteLine("There you go.");
+                    }
+                    else if (much >= 10)
+                    {
+                        double total = much * PriceOfCoffee;
+                        Console.WriteLine("There you go. I paid {0} for you. a..a.aha.. Nothing.", total);
+                    }
+                    else if(much > 2 && much < 10 && much != 4)
+                    {
+                        Console.WriteLine("Don't you need some more?");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yeah, sure. I've got this.");
+                    }
                 }
             }
             else
