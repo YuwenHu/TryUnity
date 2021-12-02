@@ -73,6 +73,12 @@ namespace _CsharpBasicbyHEHE
             return judge;
         }
 
+        public bool Not()
+        {
+            bool judgeNot = !(230 < 1);//230 < 1 = false, !230<1 = true
+            return judgeNot;
+        }
+
         public void Display()
         {   //print
             Console.WriteLine("first assginment a\babout print" + E);//\b是一个backspace删除前一个字符，且句子的头尾不起作用sys不支持
@@ -85,7 +91,7 @@ namespace _CsharpBasicbyHEHE
             Console.WriteLine(@"\A\B\C");//@保证程序输出地址栏，即取消\的转义符作用
             Console.WriteLine(@"黑，
             你好");//用@将字符串按原格式输出
-            Console.WriteLine("{0}", SmallerOrBigger());
+            Console.WriteLine("{0}, {1}", SmallerOrBigger(), Not());
         }
 
         public void PPIandIPP()
